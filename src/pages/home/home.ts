@@ -1,14 +1,35 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import * as Counter from '../../app/counter.actions';
+interface AppState {
+  counter: number;
+}
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  counter: Observable<number>;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(
+    private store: Store<AppState>,
+    public navCtrl: NavController) {
+		this.counter = store.select('counter');
   }
 
+      increment() {
+        this.store.dispatch(new Counter.Increment());
+    }
+      
+	decrement(){
+		this.store.dispatch(new Counter.Decrement());
+	}
+
+	reset(){
+		this.store.dispatch(new Counter.Reset(3));
+	}      
 }

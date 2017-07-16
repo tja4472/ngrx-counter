@@ -11,4 +11,17 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+  <div>Current Count: {{ counter | async }}</div>
+  <button ion-button
+          (click)="increment()"
+          color="primary"
+          block>Increment</button>
+  <button ion-button
+          (click)="decrement()"
+          color="primary"
+          block>Decrement</button>     
+  <button ion-button
+          (click)="reset()"
+          color="primary"
+          block>Reset</button>                  
 </ion-content>
