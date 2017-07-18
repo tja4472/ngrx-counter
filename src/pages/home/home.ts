@@ -18,18 +18,19 @@ export class HomePage {
   constructor(
     private store: Store<AppState>,
     public navCtrl: NavController) {
-		this.counter = store.select('counter');
+    // this.counter = store.select('counter');
+    this.counter = store.select(s => s.counter);
   }
 
-      increment() {
-        this.store.dispatch(new Counter.Increment());
-    }
-      
-	decrement(){
-		this.store.dispatch(new Counter.Decrement());
-	}
+  increment() {
+    this.store.dispatch(new Counter.Increment());
+  }
 
-	reset(){
-		this.store.dispatch(new Counter.Reset(3));
-	}      
+  decrement() {
+    this.store.dispatch(new Counter.Decrement());
+  }
+
+  reset() {
+    this.store.dispatch(new Counter.Reset(3));
+  }
 }
