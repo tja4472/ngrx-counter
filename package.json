@@ -29,9 +29,9 @@
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.12",
-    "@ngrx/store": "github:ngrx/store-builds",
-    "@ngrx/effects": "github:ngrx/effects-builds",
-    "@ngrx/store-devtools": "github:ngrx/store-devtools-builds"
+    "@ngrx/store": "4.0.0",
+    "@ngrx/effects": "4.0.1",
+    "@ngrx/store-devtools": "4.0.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "2.0.2",
