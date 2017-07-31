@@ -8,10 +8,12 @@ export class Increment implements Action {
   readonly type = INCREMENT;
 }
 
+// tslint:disable-next-line:max-classes-per-file
 export class Decrement implements Action {
   readonly type = DECREMENT;
 }
 
+// tslint:disable-next-line:max-classes-per-file
 export class Reset implements Action {
   readonly type = RESET;
 

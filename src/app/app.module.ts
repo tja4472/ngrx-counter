@@ -21,7 +21,7 @@ import { reducer } from './counter.reducer';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot({counter: reducer}),
-    StoreDevtoolsModule.instrument(),     
+    StoreDevtoolsModule.instrument(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

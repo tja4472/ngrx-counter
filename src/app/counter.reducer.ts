@@ -11,7 +11,7 @@ export interface State {
 export const initialState: State = {
     counter: 0,
 }
-  
+
   export function reducer(state = initialState, action: Action): State {
   switch(action.type) {
     case CounterActions.INCREMENT: {
@@ -25,30 +25,30 @@ export const initialState: State = {
 
     case CounterActions.RESET: {
       return { ...state, counter: action.payload };
-    }    
+    }
 
     default: {
       return state;
-    }    
-  }  
+    }
+  }
 }
 */
-  export function reducer(state: State = 0, action: Action): State {
-  switch(action.type) {
+export function reducer(state: State = 0, action: Action): State {
+  switch (action.type) {
     case CounterActions.INCREMENT: {
       return state + 1;
     }
 
     case CounterActions.DECREMENT: {
-      return  state - 1;
+      return state - 1;
     }
 
     case CounterActions.RESET: {
       return action.payload;
-    }    
+    }
 
     default: {
       return state;
-    }    
-  }  
+    }
+  }
 }

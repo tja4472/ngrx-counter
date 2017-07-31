@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import * as Counter from '../../app/counter.actions';
-interface AppState {
+interface IAppState {
   counter: number;
 }
 
@@ -16,10 +16,10 @@ export class HomePage {
   counter: Observable<number>;
 
   constructor(
-    private store: Store<AppState>,
+    private store: Store<IAppState>,
     public navCtrl: NavController) {
     // this.counter = store.select('counter');
-    this.counter = store.select(s => s.counter);
+    this.counter = store.select((s) => s.counter);
   }
 
   increment() {
