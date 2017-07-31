@@ -10,10 +10,10 @@ interface IAppState {
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
-  counter: Observable<number>;
+  public counter: Observable<number>;
 
   constructor(
     private store: Store<IAppState>,
@@ -22,15 +22,15 @@ export class HomePage {
     this.counter = store.select((s) => s.counter);
   }
 
-  increment() {
+  public increment() {
     this.store.dispatch(new Counter.Increment());
   }
 
-  decrement() {
+  public decrement() {
     this.store.dispatch(new Counter.Decrement());
   }
 
-  reset() {
+  public reset() {
     this.store.dispatch(new Counter.Reset(3));
   }
 }

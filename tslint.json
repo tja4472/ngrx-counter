@@ -5,15 +5,15 @@
   "rules": {
     // "tslint:recommended" overrides
     // ------------------------------
-    "member-access": [false],
-    "no-consecutive-blank-lines": false,
+    // "member-access": [false],
+    // "no-consecutive-blank-lines": false,
     "no-console": [false],
-    "object-literal-sort-keys": [false],
-    "ordered-imports": [false],
-    "quotemark": [true, "single"],
-    "trailing-comma": [false],
-    "typedef-whitespace": [false],
-    "whitespace": [false]   
+    // "object-literal-sort-keys": [false],
+    // "ordered-imports": [false],
+    "quotemark": [true, "single"]
+    // "trailing-comma": [false],
+    // "typedef-whitespace": [false]
+    // "whitespace": [false]   
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

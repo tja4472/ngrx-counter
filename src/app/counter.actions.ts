@@ -5,17 +5,17 @@ export const DECREMENT = '[Counter] Decrement';
 export const RESET = '[Counter] Reset';
 
 export class Increment implements Action {
-  readonly type = INCREMENT;
+  public readonly type = INCREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
 export class Decrement implements Action {
-  readonly type = DECREMENT;
+  public readonly type = DECREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
 export class Reset implements Action {
-  readonly type = RESET;
+  public readonly type = RESET;
 
   constructor(public payload: number) { }
 }
