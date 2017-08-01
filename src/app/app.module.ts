@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { HomePage } from '../pages/home/home';
 import { MyApp } from './app.component';
+import { reducers } from './feature-reducers';
 import { rootReducers } from './root-reducers';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { rootReducers } from './root-reducers';
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot(rootReducers),
     StoreDevtoolsModule.instrument(),
+    StoreModule.forFeature('featureName', reducers),
   ],
   providers: [
     StatusBar,

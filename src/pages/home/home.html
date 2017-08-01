@@ -32,5 +32,18 @@
   <button ion-button
           (click)="resetB()"
           color="primary"
-          block>Reset(B)</button>                          
+          block>Reset(B)</button>     
+  <div>Current Count(Feature): {{ counterFeature | async }}</div>
+  <button ion-button
+          (click)="incrementFeature()"
+          color="primary"
+          block>Increment(Feature)</button>
+  <button ion-button
+          (click)="decrementFeature()"
+          color="primary"
+          block>Decrement(Feature)</button>     
+  <button ion-button
+          (click)="resetFeature()"
+          color="primary"
+          block>Reset(Feature)</button>                                
 </ion-content>
