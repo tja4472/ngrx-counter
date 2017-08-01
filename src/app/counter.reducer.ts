@@ -2,7 +2,8 @@ import * as CounterActions from './counter.actions';
 
 export type Action = CounterActions.All;
 
-export type State = number;
+export type IState = number;
+
 /*
 export interface State {
     counter: number;
@@ -33,7 +34,7 @@ export const initialState: State = {
   }
 }
 */
-export function reducer(state: State = 0, action: Action): State {
+export function reducer(state: IState = 0, action: Action): IState {
   switch (action.type) {
     case CounterActions.INCREMENT: {
       return state + 1;

@@ -7,21 +7,30 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-  <div>Current Count: {{ counter | async }}</div>
+  <div>Current Count(A): {{ counterA | async }}</div>
   <button ion-button
-          (click)="increment()"
+          (click)="incrementA()"
           color="primary"
-          block>Increment</button>
+          block>Increment(A)</button>
   <button ion-button
-          (click)="decrement()"
+          (click)="decrementA()"
           color="primary"
-          block>Decrement</button>     
+          block>Decrement(A)</button>     
   <button ion-button
-          (click)="reset()"
+          (click)="resetA()"
           color="primary"
-          block>Reset</button>                  
+          block>Reset(A)</button>   
+  <div>Current Count(B): {{ counterB | async }}</div>
+  <button ion-button
+          (click)="incrementB()"
+          color="primary"
+          block>Increment(B)</button>
+  <button ion-button
+          (click)="decrementB()"
+          color="primary"
+          block>Decrement(B)</button>     
+  <button ion-button
+          (click)="resetB()"
+          color="primary"
+          block>Reset(B)</button>                          
 </ion-content>

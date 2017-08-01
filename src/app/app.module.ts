@@ -1,16 +1,15 @@
-
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { HomePage } from '../pages/home/home';
-import { MyApp } from './app.component';
-
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducer } from './counter.reducer';
+
+import { HomePage } from '../pages/home/home';
+import { MyApp } from './app.component';
+import { rootReducers } from './root-reducers';
 
 @NgModule({
   bootstrap: [IonicApp],
@@ -25,7 +24,7 @@ import { reducer } from './counter.reducer';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    StoreModule.forRoot({ counter: reducer }),
+    StoreModule.forRoot(rootReducers),
     StoreDevtoolsModule.instrument(),
   ],
   providers: [
