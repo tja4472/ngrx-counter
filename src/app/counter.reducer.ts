@@ -1,6 +1,6 @@
 import * as CounterActions from './counter.actions';
 
-export type Action = CounterActions.All;
+export type Action = CounterActions.Actions;
 
 export type IState = number;
 

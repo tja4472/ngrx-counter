@@ -4,26 +4,26 @@ export const INCREMENT = '[CounterB] Increment';
 export const DECREMENT = '[CounterB] Decrement';
 export const RESET = '[CounterB] Reset';
 
-export class Increment implements Action {
+export class IncrementAction implements Action {
     public readonly type = INCREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class Decrement implements Action {
+export class DecrementAction implements Action {
     public readonly type = DECREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class Reset implements Action {
+export class ResetActions implements Action {
     public readonly type = RESET;
 
     constructor(public payload: number) { }
 }
 
 export type Actions
-    = Increment
-    | Decrement
-    | Reset;
+    = IncrementAction
+    | DecrementAction
+    | ResetActions;
 
 /********************
  * Reducer

@@ -1,26 +1,26 @@
 import { Action } from '@ngrx/store';
 
-export const INCREMENT = '[Counter] Increment';
-export const DECREMENT = '[Counter] Decrement';
-export const RESET = '[Counter] Reset';
+export const INCREMENT = '[CounterA] Increment';
+export const DECREMENT = '[CounterA] Decrement';
+export const RESET = '[CounterA] Reset';
 
-export class Increment implements Action {
+export class IncrementAction implements Action {
   public readonly type = INCREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class Decrement implements Action {
+export class DecrementAction implements Action {
   public readonly type = DECREMENT;
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class Reset implements Action {
+export class ResetAction implements Action {
   public readonly type = RESET;
 
   constructor(public payload: number) { }
 }
 
-export type All
-  = Increment
-  | Decrement
-  | Reset;
+export type Actions
+  = IncrementAction
+  | DecrementAction
+  | ResetAction;

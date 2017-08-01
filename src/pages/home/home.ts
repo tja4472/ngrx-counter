@@ -24,26 +24,26 @@ export class HomePage {
   }
 
   public incrementA() {
-    this.store.dispatch(new CounterA.Increment());
+    this.store.dispatch(new CounterA.IncrementAction());
   }
 
   public decrementA() {
-    this.store.dispatch(new CounterA.Decrement());
+    this.store.dispatch(new CounterA.DecrementAction());
   }
 
   public resetA() {
-    this.store.dispatch(new CounterA.Reset(3));
+    this.store.dispatch(new CounterA.ResetAction(3));
   }
 
   public incrementB() {
-    this.store.dispatch(new CounterB.Increment());
+    this.store.dispatch(new CounterB.IncrementAction());
   }
 
   public decrementB() {
-    this.store.dispatch(new CounterB.Decrement());
+    this.store.dispatch(new CounterB.DecrementAction());
   }
 
   public resetB() {
-    this.store.dispatch(new CounterB.Reset(3));
+    this.store.dispatch(new CounterB.ResetActions(3));
   }
 }
