@@ -1,6 +1,6 @@
 import {
     ActionReducerMap,
-    createFeatureSelector,
+    // createFeatureSelector,
     createSelector,
 } from '@ngrx/store';
 
@@ -20,7 +20,8 @@ export const rootReducers: ActionReducerMap<IRootState> = {
 /**
  * CounterB Reducers
  */
-export const getCounterBState = createFeatureSelector<fromCounterB.IState>('counterB');
+// export const getCounterBState = createFeatureSelector<fromCounterB.IState>('counterB');
+export const getCounterBState = (state: IRootState) => state.counterB;
 
 export const getCounterB = createSelector(
     getCounterBState,
