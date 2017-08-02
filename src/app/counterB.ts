@@ -41,7 +41,6 @@ export function reducer(
     action: Actions): IState {
     switch (action.type) {
         case INCREMENT: {
-            console.log('aaa>', state);
             return { ...state, counter: state.counter + 1 };
         }
 
@@ -59,4 +58,16 @@ export function reducer(
     }
 }
 
-export const getCounter = (state: IState) => state.counter;
+// standard.
+// export const getCounter = (state: IState) => state.counter;
+
+// debugging.
+// getCounter should only be called if state changes.
+// createSelector() not memoizing correctly
+// https://github.com/ngrx/platform/issues/226
+let lastState: IState;
+export const getCounter = (state: IState) => {
+    console.log('counterB:Projector called, parameter changed: ', !(lastState === state));
+    lastState = state;
+    return state.counter;
+};

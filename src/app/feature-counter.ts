@@ -41,7 +41,6 @@ export function reducer(
     action: Actions): IState {
     switch (action.type) {
         case INCREMENT: {
-            console.log('aaa>', state);
             return { ...state, counter: state.counter + 1 };
         }
 
