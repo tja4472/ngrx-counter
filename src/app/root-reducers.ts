@@ -1,8 +1,5 @@
-import {
-    ActionReducerMap,
-    // createFeatureSelector,
-    createSelector,
-} from '@ngrx/store';
+import { ActionReducerMap, createSelector, MetaReducer } from '@ngrx/store';
+import { storeFreeze } from 'ngrx-store-freeze';
 
 import * as fromCounterA from './counter.reducer';
 import * as fromCounterB from './counterB';
@@ -16,6 +13,9 @@ export const rootReducers: ActionReducerMap<IRootState> = {
     counterA: fromCounterA.reducer,
     counterB: fromCounterB.reducer,
 };
+
+// export const metaReducers: Array<ActionReducer<any, any>> = [storeFreeze];
+export const metaReducers: Array<MetaReducer<any>> = [storeFreeze];
 
 /**
  * CounterB Reducers

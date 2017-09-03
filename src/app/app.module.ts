@@ -13,7 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { MyApp } from './app.component';
 import { counterB_Effects } from './counterB-effects';
 import { reducers } from './feature-reducers';
-import { rootReducers } from './root-reducers';
+import { metaReducers, rootReducers } from './root-reducers';
 
 @NgModule({
   bootstrap: [IonicApp],
@@ -28,7 +28,7 @@ import { rootReducers } from './root-reducers';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    StoreModule.forRoot(rootReducers),
+    StoreModule.forRoot(rootReducers, { metaReducers }),
     StoreDevtoolsModule.instrument(),
     StoreModule.forFeature('featureName', reducers),
     EffectsModule.forRoot([counterB_Effects]),
