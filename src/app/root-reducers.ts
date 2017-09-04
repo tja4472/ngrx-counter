@@ -15,7 +15,7 @@ export const rootReducers: ActionReducerMap<IRootState> = {
 };
 
 // export const metaReducers: Array<ActionReducer<any, any>> = [storeFreeze];
-export const metaReducers: Array<MetaReducer<any>> = [storeFreeze];
+export const metaReducers: Array<MetaReducer<IRootState>> = [storeFreeze];
 
 /**
  * CounterB Reducers

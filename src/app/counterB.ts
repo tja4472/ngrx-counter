@@ -41,11 +41,13 @@ export function reducer(
     action: Actions): IState {
     switch (action.type) {
         case INCREMENT: {
+            // type safe: typescript 2.4.2
             return { ...state, counter: state.counter + 1 };
         }
 
         case DECREMENT: {
             // return { ...state, counter: state.counter - 1 };
+            // not type safe: typescript 2.4.2
             return Object.assign({}, state, { counter: state.counter - 1 });
         }
 
